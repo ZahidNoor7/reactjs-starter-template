@@ -1,10 +1,10 @@
 // App.tsx
 import React from "react";
 import {
-  BrowserRouter as Router,
-  Routes,
   Route,
+  Routes,
   Navigate,
+  BrowserRouter as Router,
 } from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";

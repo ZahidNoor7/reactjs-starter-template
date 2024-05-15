@@ -26,10 +26,11 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start & npm run watch-tailwind",
+    "start": "react-scripts start && npm run watch-tailwind",
     "build": "react-scripts build && npm run build-tailwind",
     "watch-tailwind": "tailwindcss -i src/styles/tailwind-input.css -o src/styles/tailwind-output.css --watch",
     "build-tailwind": "tailwindcss -i src/styles/tailwind-input.css -o src/styles/tailwind-output.css",
+    "sync": "aws s3 sync [build folder path] aws 's3://[s3 bucket name]/'",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -52,6 +53,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@babel/plugin-transform-private-property-in-object": "^7.24.5",
     "@types/js-cookie": "^3.0.6",
     "autoprefixer": "^10.4.19",

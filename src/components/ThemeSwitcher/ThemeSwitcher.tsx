@@ -1,5 +1,4 @@
 // src/components/ThemeSwitcher.js
-
 import { useState, useEffect } from "react";
 import { IoSunnySharp, IoMoonSharp } from "react-icons/io5";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks";
@@ -48,9 +47,9 @@ const ThemeSwitcher = () => {
     <div className="ThemeSwitcher absolute right-4 top-4">
       <button
         onClick={toggleDarkMode}
-        className={`ThemeSwitcher w-10 h-10 flex items-center justify-center rounded-md focus:outline-none ${
+        className={`ThemeSwitcher w-10 h-10 flex items-center justify-center rounded-lg focus:outline-none ${
           isDarkMode && theme === "dark"
-            ? "bg-black text-white"
+            ? "bg-gray-800 text-white"
             : "bg-black text-white"
         }`}
       >
